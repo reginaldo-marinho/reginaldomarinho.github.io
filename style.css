@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;800;900&family=Montserrat:wght@600&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+body{
+    margin: 0;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body, .line-efect, ul{
+    cursor: url('./assets/imagens/cursor-seta.png'),auto;
+}
+a {
+    text-decoration: none;
+    color: black;
+    cursor: url('./assets/imagens/cursor-mao.png'),auto;
+}
+
+.box-principal{
+    display: flex;
+    margin: 0px;
+}
+
+.ic-clo-left{
+    float: right;
+    font-size: 30px;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: #000000;
+}
+
+.menu-esquero{
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100vh;
+    width: 0;
+    overflow-x: hidden;
+    box-shadow: 1px 0px 15px  #c9c9c9;
+    transition: 0.5s;
+}
+
+.left-detalhe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.img-perfil{   
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    border: 2px solid;
+    margin: 5px;
+}
+
+.left-detalhe ul{
+    list-style: none;
+    padding: 0;
+}
+
+.left-detalhe ul li{
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 3px solid transparent;
+    transform:none;    
+}
+
+
+
+
+.line-efect{
+    display: block;  
+    width:0;
+    height: 3px;
+    background-color: transparent;
+    bottom: 0;
+    transition: 0.6s;
+    background-color:#9610f0;
+    transition-timing-function: ease;
+}
+ul li:hover .line-efect
+{
+    width:100%;
+}
