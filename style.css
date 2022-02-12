@@ -15,6 +15,19 @@ a {
     color: black;
     cursor: url('./assets/imagens/cursor-mao.png'),auto;
 }
+p{
+    text-indent: 50px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+h1{
+    font-size: 3rem;
+    font-family: "Impact", -apple-system, BlinkMacSystemFont, "Segoe UI";
+    color: #343a40;
+    letter-spacing: 5px;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
 
 .box-principal{
     display: flex;
@@ -34,10 +47,11 @@ a {
     -ms-flex-direction: column;
     flex-direction: column;
     height: 100vh;
-    width: 0;
+    width: 300px;
     overflow-x: hidden;
     box-shadow: 1px 0px 15px  #c9c9c9;
     transition: 0.5s;
+    margin-right: 30px;
 }
 
 .left-detalhe{
@@ -46,13 +60,14 @@ a {
     align-items: center;
     justify-content: center;
     height: 100%;
+    z-index: 0;
 }
 
 .img-perfil{   
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
     border-radius: 100px;
-    border: 2px solid;
+    border: 5px solid #bc7be9;
     margin: 5px;
 }
 
@@ -70,10 +85,6 @@ a {
     border-bottom: 3px solid transparent;
     transform:none;    
 }
-
-
-
-
 .line-efect{
     display: block;  
     width:0;
@@ -87,4 +98,13 @@ a {
 ul li:hover .line-efect
 {
     width:100%;
+}
+
+.conteiner-conteudos{
+    width: 100%;
+    margin-right: 100px;
+}
+
+.quadro-info{
+    max-width: 70%;
 }
