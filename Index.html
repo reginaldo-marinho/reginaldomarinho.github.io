@@ -6,49 +6,47 @@
     <link rel="stylesheet" href="./style.css">  
 </head>
 <body>
-<main class="box-principal">
-    <div class="menu-esquero" id="menu-left">
-        <div class="left-detalhe" >
-            <img src="./assets/imagens/foto-perfil.jpg" alt="" class="img-perfil" >
-            <ul>
-                <li><a > Quem sou? <span class="line-efect"></span></a></li>
-                <li>Onde Trabalho? <span class="line-efect"></span></li>
-                <li>Meus Projetos <span class="line-efect"></span></li>
-                <li>Minhas Redes <span class="line-efect"></span></li>
-            </ul>
-        </div>    
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="#quemsou"> Quem sou <span class="line-efect"></span></a></li>
+            <li><a href=""> Meus Projetos <span class="line-efect"></span></a></li>
+            <li>Onde Trabalho <span class="line-efect"></span></li>
+            <li>Minhas Redes <span class="line-efect"></span></li>  
+        </ul>
+    </nav>
+    <div class="banner-facha"></div>
+    <div class="banner">
+        <img src="./assets/imagens/foto-perfil.jpg" alt="" class="img-perfil" >
+        <h1 style="text-transform: uppercase;">Reginaldo <span style="color: blueviolet;">Marinho</span> </h1>
     </div>
-    <div class="conteiner-conteudos">
-        <div id="quemsou">
-            <h1 style="text-transform: uppercase; margin-bottom: 30px;">Reginaldo <span style="color: blueviolet;">Marinho</span> </h1>
+    <div class="container">
+        <section style="text-align: justify;" id="quemsou">
             <div class="quadro-info">
+                <h2>Quem Sou</h2>
                 <p>
                     Motivado pela curiosidade e pela sensação de ver meu trabalho influenciar a vida de terceiras pessoas, 
                     decidi estudar analise e desenvolvimento de sistemas onde 
                     no meu primerio ano de faculdade  pude deixar meu emprego de ajudante de produção
                     ser  programador estagiario. Em 2021 foi o ano em que fui efetivado como programador junior 
-                    e a partir daqui veremos um pouco da minha jornada.  
+                    e a partir daqui veremos um pouco do que venho aprendendo.  
                 </p>
-            </div>
-            <div class="quadro-info">
-                <div class="quadro-info-title">
-                    <h2>Formação academica</h2>
-                    <i class="bi bi-diamond ic-h2"></i>
-                </div>    
-                <ul>
-                    <li>Formação: Análise e desenvolvimento de sistemas</li>
-                    <li>Instituição: Universidade Paulista UNIP</li>
-                    <li>Periodo: 2019 - 2020</li>
-                    <li>Local: Jundiai</li>
-                </ul>
-            </div>
-            <div class="quadro-info">
-                <div class="quadro-info-title">
-                    <h2>Linguagens e Ferramentas</h2>
-                    <i class="bi bi-code-slash ic-h2"></i>
-                </div>  
+                <h3>Formação academica</h3>
+                <div class="quadro-info-detail">
+                    <ul>
+                        <li>Formação: Análise e desenvolvimento de sistemas</li>
+                        <li>Instituição: Universidade Paulista UNIP</li>
+                        <li>Periodo: 2019 - 2020</li>
+                        <li>Local: Jundiai</li>
+                    </ul>
+                </div>
+                <h3>Linguagens e Ferramentas</h3>
                 <div class="paleta-linguagens">
-                    <img src="./assets/imagens/linguagens/csharp.png" alt="">
+                    <div class="group-img">
+                        <div class="img-info">
+                            c# e .net frameworks
+                        </div>
+                        <img src="./assets/imagens/linguagens/csharp.png" alt="" id="img-c#">
+                    </div>
                     <img src="./assets/imagens/linguagens/sharpcore.png" alt="">
                     <img src="./assets/imagens/linguagens/crystal.png" alt="">
                     <img src="./assets/imagens/linguagens/css.png" alt="">
@@ -57,11 +55,44 @@
                     <img src="./assets/imagens/linguagens/sage x3.png" alt="">
                     <img src="./assets/imagens/linguagens/angular.svg" alt="">
                     <img src="./assets/imagens/linguagens/sql server.png" alt="">
+            </div>
+       </section>
+
+    </div>
+
+    <main class="box-principal" id="meusprojetos">
+        <h2 id="meus-projetos">Meus projetos</h2>
+    </main>     
+    <footer>
+        <div class="footer-container">
+            <div class="footer-container-row">
+                <div class="footer-endereco">
+                    <h3>ENDEREÇO</h3>       
+                        <ul>
+                            <li>João Justino dos Santos</li>
+                            <li>Itatiba Park</li>
+                            <li>São Paulo</li>
+                        </ul>
+                </div>
+                <div class="footer-endereco">
+                    <h3>PONTOS DE ENTRADA</h3>       
+                        <ul>
+                            <li>João Justino dos Santos</li>
+                            <li>Itatiba Park</li>
+                            <li>São Paulo</li>
+                        </ul>
+                </div>
+                <div class="footer-endereco">
+                    <h3>SOBRE MIM</h3>       
+                        <ul>
+                            <li>João Justino dos Santos</li>
+                            <li>Itatiba Park</li>
+                            <li>São Paulo</li>
+                        </ul>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </footer>
 <script src="./js.js"></script>
 </body>
 </html>
