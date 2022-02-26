@@ -21,9 +21,13 @@ body, .line-efect, ul{
 }
 a {
     text-decoration: none;
-    color: black;
+    color: black;   
+}
+
+.group-projeto,a{
     cursor: url('./assets/imagens/cursor-mao.png'),auto;
 }
+
 p{
     text-indent: 50px;
     margin-bottom: 0;
@@ -222,21 +226,6 @@ footer{
     height: 400px;
 }
 
-.group-projeto{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 400px;
-    background-color: #6b34e2;
-    border-radius: 5px;
-}
-.projeto-mais-imagens{
-    position: absolute;
-    opacity: 0%;
-}
-.projeto-mais-imagens:hover{
-    opacity: 100%;
-}
 .palheta-projetos{
     display: flex;
     align-items: center;
@@ -245,13 +234,50 @@ footer{
     width: 100%;
     margin-bottom: 50px;
 }
+
+.group-projeto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    background-color: #6b34e2;
+    border-radius: 5px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.projeto-mais-imagens{
+    position: absolute;
+    opacity: 0%;
+    color: #fff;
+}
+.projeto-mais-imagens i{
+    font-size: 50px;
+    display: block;
+}
+
+.group-projeto:hover .projeto-mais-imagens{
+    opacity: 100%;
+}
+.group-projeto:hover img{
+    opacity: 0%;
+}
+.projeto-mais-imagens:hover img{
+    opacity: 0%;
+}
+
 .palheta-projetos img {
     max-width: 400px;
-    transition: 0.7s;
+    transition: 0.4s;
     transition-timing-function: ease;
 }
 
-
+.amostra-imagens{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #343a40;
+}
 
 @media screen and (max-width: 400px) {  
     
