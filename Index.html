@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Meu Portifólio</title>
     <link rel="stylesheet" href="./style.css">  
+    <script src="./js.js"></script>
 </head>
 <body>
     <nav class="nav-bar">
@@ -20,7 +21,7 @@
         <h1 style="text-transform: uppercase;">Reginaldo <span style="color: blueviolet;">Marinho</span> </h1>
     </div>
     <div class="container">
-        <section style="text-align: justify;" id="quemsou">
+        <section style="text-align: justify;" id="quemsou" >
             <div class="quadro-info">
                 <h2>Quem Sou</h2>
                 <p>
@@ -40,29 +41,25 @@
                     </ul>
                 </div>
                 <h3>Linguagens e Ferramentas</h3>
-                <div class="paleta-linguagens">
-                    <div class="group-img">
-                        <div class="img-info">
-                            c# e .net frameworks
-                        </div>
-                        <img src="./assets/imagens/linguagens/csharp.png" alt="" id="img-c#">
-                    </div>
-                    <img src="./assets/imagens/linguagens/sharpcore.png" alt="">
-                    <img src="./assets/imagens/linguagens/crystal.png" alt="">
-                    <img src="./assets/imagens/linguagens/css.png" alt="">
-                    <img src="./assets/imagens/linguagens/html.png" alt="">
-                    <img src="./assets/imagens/linguagens/js.png" alt="">
-                    <img src="./assets/imagens/linguagens/sage x3.png" alt="">
-                    <img src="./assets/imagens/linguagens/angular.svg" alt="">
-                    <img src="./assets/imagens/linguagens/sql server.png" alt="">
+                <div class="paleta-linguagens" id="PaletaLinguagens">
+                </div>
             </div>
        </section>
-
-    </div>
-
-    <main class="box-principal" id="meusprojetos">
-        <h2 id="meus-projetos">Meus projetos</h2>
-    </main>     
+       <section>
+            <h2 id="meus-projetos">Meus projetos</h2>
+            <div class="palheta-projetos">
+                <div class="group-projeto">
+                    <div class="projeto-mais-imagens">
+                        <i class="bi bi-grid" style="font-size: 50px;"></i>
+                    </div>
+                    <img src="./assets/imagens/Projetos/Tecno 103/caixa.jpeg" alt="">
+                </div>
+                <div>
+                    <img src="./assets/imagens/Projetos/Tecno 103/main.jpeg" alt="">
+                </div>
+            </div>
+       </section>
+    </div> 
     <footer>
         <div class="footer-container">
             <div class="footer-container-row">
@@ -93,6 +90,6 @@
             </div>
         </div>
     </footer>
-<script src="./js.js"></script>
+
 </body>
 </html>
