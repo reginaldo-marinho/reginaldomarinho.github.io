@@ -1,49 +1,21 @@
-
-window.addEventListener("DOMContentLoaded", event => {
-
-    CriarPaletaDeLiguagens();
-
-    var section  = document.getElementsByTagName('section') ;
-    var sectionList = {}
-
-    Array.prototype.forEach.call(section,function (e){  
-        sectionList[e.id] = e.offsetTop  // pegas todas as posições atuais
-    });
-
-    document.addEventListener('scroll',function(){
-      var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop; 
-      for ( i in sectionList) {
-       if(sectionList[i] <= scrollPosition){
-           document.querySelector('a[href*=' + i + ']').setAttribute('class', 'item-nav-ativo');
-       }
-       else{
-        document.querySelector('a[href*=' + i + ']').classList.remove('item-nav-ativo')
-      }}
+let sessoes = (function (){
+    var sessao  = document.getElementsByTagName('section');
+    var listaSessao = {}
+    var ultimoIdEmFoco
+    Array.prototype.forEach.call(sessao, function(event){
+        listaSessao[event.id] = event.offsetTop
     })
-
-    document.getElementById("tecno-103").addEventListener("click",() => {
-        var amostraImagem = document.getElementById('amostra-imagens')
-        amostraImagem.style.display= "block"
-    })
-
-    document.getElementById("close-amostra-imagens").addEventListener("click",() => {
-        var amostraImagem = document.getElementById('amostra-imagens')
-        amostraImagem.style.display= "none"
-    })
-
-    document.querySelectorAll('i.bi-chevron-compact-left,i.bi-chevron-compact-right').forEach(item =>{
-        item.addEventListener("click",(event)=>{
-            switch(event.target.id){
-                case 'next':
-                    contarImagens.next()
-                    break;
-                case 'previos':
-                    contarImagens.previos()
-                    break;
-            }
-        })
-    })
-});
+    return {
+        listaSessao,
+        RemoveUltimoId: function (){
+            if(ultimoIdEmFoco!=undefined) document.querySelector('a[href*=' + ultimoIdEmFoco + ']')
+            .querySelector('.line-efect').classList.remove('line-efect-on')
+        },
+        SetUltimoId: function (id){
+            ultimoIdEmFoco = id
+        }
+    }
+})()
 
 let contarImagens = (function(){
     let privateContador = 1;
@@ -67,6 +39,48 @@ let contarImagens = (function(){
     }
 })();
 
+window.addEventListener("DOMContentLoaded", event => {
+
+    CriarPaletaDeLiguagens();
+
+    document.addEventListener('scroll',function(){
+        var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        scrollPosition+=80
+
+        for ( i in sessoes.listaSessao) {
+            if(sessoes.listaSessao[i] <= scrollPosition){ 
+                sessoes.RemoveUltimoId()
+                document.querySelector('a[href*=' + i + ']')
+                .querySelector('.line-efect').classList.add('line-efect-on')
+                sessoes.SetUltimoId(i)
+            }
+        }
+      })
+
+    document.getElementById("tecno-103").addEventListener("click",() => {
+        var amostraImagem = document.getElementById('box-imagens')
+        amostraImagem.style.display= "block"
+    })
+
+    document.getElementById("close-amostra-imagens").addEventListener("click",() => {
+        var amostraImagem = document.getElementById('box-imagens')
+        amostraImagem.style.display= "none"
+    })
+
+    document.querySelectorAll('i.bi-chevron-compact-left,i.bi-chevron-compact-right').forEach(item =>{
+        item.addEventListener("click",(event)=>{
+            switch(event.target.id){
+                case 'next':
+                    contarImagens.next()
+                    break;
+                case 'previos':
+                    contarImagens.previos()
+                    break;
+            }
+        })
+    })
+
+});
 
 function CriarPaletaDeLiguagens(){
     LinguagensFerramentas.conteudo.forEach(item => {
