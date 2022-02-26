@@ -15,7 +15,18 @@ window.addEventListener("DOMContentLoaded", event => {
         document.querySelector('a[href*=' + i + ']').removeAttribute('class', 'item-nav-ativo');
       }}
     })
-    CriarPaletaDeLiguagens();    
+    CriarPaletaDeLiguagens();   
+
+    document.getElementById("tenco-103").addEventListener("click",() => {
+        var amorstraImagem = document.getElementById('amostra-imagens')
+        amorstraImagem.style.display= "block"
+    })
+    
+    document.getElementById("close-amostra-imagens").addEventListener("click",() => {
+        var amorstraImagem = document.getElementById('amostra-imagens')
+        amorstraImagem.style.display= "none"
+    })
+
 });
 
 function CriarPaletaDeLiguagens(){

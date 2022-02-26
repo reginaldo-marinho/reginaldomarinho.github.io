@@ -271,12 +271,43 @@ footer{
     transition: 0.4s;
     transition-timing-function: ease;
 }
-
 .amostra-imagens{
+    display: none;
+    top: 0;
+    left: 0;
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: #343a40;
+    background-color: #ffffff;
+    z-index: 2000;
+}
+.amostra-imagens-quadro{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.amostra-imagens-painel{
+    margin-top: 50px;
+    position: fixed;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #6b34e2;
+}
+.amostra-imagens img{
+    max-width:1000px;
+    max-height: 600px;
+}
+.close {
+    position: absolute;
+    display: block;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 @media screen and (max-width: 400px) {  
