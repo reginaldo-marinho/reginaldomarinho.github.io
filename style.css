@@ -41,7 +41,8 @@ h1{
 }
 h2{
     display: inline;
-    font-size: 2.5rem
+    font-size: 2.5rem;
+    text-transform: uppercase;
 }
 .nav-bar{
     display: flex;

@@ -1,22 +1,25 @@
 
 window.addEventListener("DOMContentLoaded", event => {
+
+    CriarPaletaDeLiguagens();
+
     var section  = document.getElementsByTagName('section') ;
     var sectionList = {}
-    
+
     Array.prototype.forEach.call(section,function (e){  
         sectionList[e.id] = e.offsetTop  // pegas todas as posições atuais
     });
+
     document.addEventListener('scroll',function(){
       var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop; 
       for ( i in sectionList) {
-       if(sectionList[i] <= scrollPosition){ 
-           document.querySelector('.item-nav-ativo')
-           item = document.querySelector('a[href*=' + i + ']').setAttribute('class', 'item-nav-ativo');
-       }else{
-        document.querySelector('a[href*=' + i + ']').removeAttribute('class', 'item-nav-ativo');
+       if(sectionList[i] <= scrollPosition){
+           document.querySelector('a[href*=' + i + ']').setAttribute('class', 'item-nav-ativo');
+       }
+       else{
+        document.querySelector('a[href*=' + i + ']').classList.remove('item-nav-ativo')
       }}
     })
-    CriarPaletaDeLiguagens();   
 
     document.getElementById("tecno-103").addEventListener("click",() => {
         var amostraImagem = document.getElementById('amostra-imagens')
@@ -137,12 +140,26 @@ let LinguagensFerramentas = {
             "nome":"Tecno-103",
             "UrlImg":[
                 {
+                    "caminho":"./assets/imagens/Projetos/Tecno 103/login.jpeg"
+                },
+                {
                     "caminho":"./assets/imagens/Projetos/Tecno 103/caixa.jpeg"
                 },
                 {
-                    "caminho":"./assets/imagens/Projetos/Tecno 103/main.jpeg"
+                    "caminho":"./assets/imagens/Projetos/Tecno 103/menu.jpeg"
+                },
+                {
+                    "caminho":"./assets/imagens/Projetos/Tecno 103/img 1.jpeg"
+                },
+                {
+                    "caminho":"./assets/imagens/Projetos/Tecno 103/mensagem form.jpeg"
+                },
+                {
+                    "caminho":"./assets/imagens/Projetos/Tecno 103/img 2.jpeg"
+                },
+                {
+                    "caminho":"./assets/imagens/Projetos/Tecno 103/img 3.jpeg"
                 }
-
             ]
         }
     ]
