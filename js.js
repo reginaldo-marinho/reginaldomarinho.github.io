@@ -1,14 +1,15 @@
+
 window.addEventListener("DOMContentLoaded", event => {
     var section  = document.getElementsByTagName('section') ;
     var sectionList = {}
-
+    
     Array.prototype.forEach.call(section,function (e){  
         sectionList[e.id] = e.offsetTop  // pegas todas as posições atuais
     });
     document.addEventListener('scroll',function(){
       var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop; 
       for ( i in sectionList) {
-       if(sectionList[i] <= scrollPosition+80){ 
+       if(sectionList[i] <= scrollPosition){ 
            document.querySelector('.item-nav-ativo')
            item = document.querySelector('a[href*=' + i + ']').setAttribute('class', 'item-nav-ativo');
        }else{
@@ -17,17 +18,52 @@ window.addEventListener("DOMContentLoaded", event => {
     })
     CriarPaletaDeLiguagens();   
 
-    document.getElementById("tenco-103").addEventListener("click",() => {
-        var amorstraImagem = document.getElementById('amostra-imagens')
-        amorstraImagem.style.display= "block"
-    })
-    
-    document.getElementById("close-amostra-imagens").addEventListener("click",() => {
-        var amorstraImagem = document.getElementById('amostra-imagens')
-        amorstraImagem.style.display= "none"
+    document.getElementById("tecno-103").addEventListener("click",() => {
+        var amostraImagem = document.getElementById('amostra-imagens')
+        amostraImagem.style.display= "block"
     })
 
+    document.getElementById("close-amostra-imagens").addEventListener("click",() => {
+        var amostraImagem = document.getElementById('amostra-imagens')
+        amostraImagem.style.display= "none"
+    })
+
+    document.querySelectorAll('i.bi-chevron-compact-left,i.bi-chevron-compact-right').forEach(item =>{
+        item.addEventListener("click",(event)=>{
+            switch(event.target.id){
+                case 'next':
+                    contarImagens.next()
+                    break;
+                case 'previos':
+                    contarImagens.previos()
+                    break;
+            }
+        })
+    })
 });
+
+let contarImagens = (function(){
+    let privateContador = 1;
+    function MudarPara(Posicao){
+        privateContador+= Posicao;
+        if(privateContador>meusProjetos.projeto[0].UrlImg.length-1){
+            privateContador= 0
+        }
+        if(privateContador < 0 ){
+            privateContador= meusProjetos.projeto[0].UrlImg.length-1
+        }
+        document.getElementById('group-projeto-imagem').setAttribute('src',meusProjetos.projeto[0].UrlImg[privateContador].caminho)
+    }
+    return {
+        next:function(){
+            MudarPara(1);
+        },
+        previos:function(){
+            MudarPara(-1);
+        }
+    }
+})();
+
 
 function CriarPaletaDeLiguagens(){
     LinguagensFerramentas.conteudo.forEach(item => {
@@ -49,7 +85,6 @@ function CriarPaletaDeLiguagens(){
     paleta.appendChild(divGroupImg);
   })
 }
-
 
 let LinguagensFerramentas = {
     "conteudo":[
@@ -96,3 +131,19 @@ let LinguagensFerramentas = {
     ]
   }
   
+  let meusProjetos = {
+    "projeto":[
+        {
+            "nome":"Tecno-103",
+            "UrlImg":[
+                {
+                    "caminho":"./assets/imagens/Projetos/Tecno 103/caixa.jpeg"
+                },
+                {
+                    "caminho":"./assets/imagens/Projetos/Tecno 103/main.jpeg"
+                }
+
+            ]
+        }
+    ]
+}
