@@ -298,7 +298,7 @@ footer{
     align-items: center;
     background-color: #6b34e2;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px #6b34e2;
+    box-shadow: 0 0 10px 4px  #dadada;
 }
 
 .amostra-imagens img{
@@ -324,20 +324,14 @@ footer{
     color: #6b34e2;
 }
 
-@media screen and (max-width: 400px) {  
-    
-    .nav-bar{
-        height: 58px; 
-    }
-
-    .banner-facha {
-        max-height: 60%;
-        transform: skewY(20deg);
-    }
-    
-    .container{
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-  }
- 
+section{
+    border: 1px #dadada solid;
+    box-shadow: 0 0 10px 1px  #dadada;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+section:hover{
+    box-shadow: 0 0 10px 4px  #dadada; 
+}
