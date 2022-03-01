@@ -39,6 +39,7 @@ let contarImagens = (function(){
     }
 })();
 
+// Não esquecer de usar InnerHTML
 window.addEventListener("DOMContentLoaded", event => {
 
     CriarPaletaDeLiguagens();
@@ -79,7 +80,6 @@ window.addEventListener("DOMContentLoaded", event => {
             }
         })
     })
-
 });
 
 function CriarPaletaDeLiguagens(){
@@ -103,6 +103,7 @@ function CriarPaletaDeLiguagens(){
   })
 }
 
+
 let LinguagensFerramentas = {
     "conteudo":[
         {
@@ -113,7 +114,7 @@ let LinguagensFerramentas = {
         {
             "nome":".NET Core",
             "imagemURl":"./assets/imagens/linguagens/sharpcore.png",
-            "descricao":"Aqui trabalho com o backend do meu projeto foguete usando fron-ent o Angular 12"
+            "descricao":"Aqui trabalho com o back-end do meu projeto foguete usando fron-end Angular 12"
         },
         {
             "nome":"Crystal Reports",
@@ -138,7 +139,7 @@ let LinguagensFerramentas = {
         {
             "nome":"Angular",
             "imagemURl":"./assets/imagens/linguagens/angular.svg",
-            "descricao":"Aqui estou trabalho no meu projeto foguete, essa aplicação tem como objetivo uma plataforma de estudos"
+            "descricao":"Aqui estou trabalho no meu projeto foguete, essa aplicação tem como objetivo a criação de um roteiro de cursos"
         },
         {
             "nome":"Sql Server",
@@ -173,6 +174,14 @@ let LinguagensFerramentas = {
                 },
                 {
                     "caminho":"./assets/imagens/Projetos/Tecno 103/img 3.jpeg"
+                }
+            ]
+        },
+        {
+            "nome":"foguete",
+            "UrlImg":[
+                {
+                "caminho":"./assets/imagens/Projetos/foguete/Criar Historia.jpg"  
                 }
             ]
         }
