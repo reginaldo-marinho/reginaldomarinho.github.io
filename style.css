@@ -43,28 +43,30 @@ h2{
     font-size: 2.5rem;
     text-transform: uppercase;
 }
-.nav-bar{
-    display: flex;
+
+.nav-bar-items{
+    position: absolute;
     width: 100%;
     height: auto;
-    position: fixed;
     justify-content : flex-end;
     background-color: #6b34e2;
     color: #fff;
     z-index: 1000; 
 }
-.nav-bar ul {
-    list-style: none;
-}
-.nav-bar ul li {
-    display: inline-block;
-    margin-right: 10px;
-}
-.nav-bar ul li a {
+
+.nav-bar-items a {
     transition: 0.5s;
     color: #fff;
+    padding-top: 20px;
+    padding-bottom:20px;
+    margin-right: 10px;
 }
 
+.btn-resposive{
+    position: absolute;
+    font-size: 50px;
+    right: 0;
+}
 .box-principal{
     display: flex;
     margin: 0px;
@@ -76,23 +78,7 @@ h2{
     border: 5px solid #fff;
     margin: 5px;
 }
-.line-efect{
-    display: block;  
-    width:0;
-    height: 3px;
-    background-color: transparent;
-    bottom: 0;
-    transition: 0.6s;
-    background-color:#fdfdfd;
-    transition-timing-function: ease;
-}
-.line-efect-on{
-    width:100%;
-}
-ul li:hover .line-efect
-{
-    width:100%;
-}
+
 .conteiner-conteudos{
     width: 100%;
     margin-right: 100px;
@@ -350,4 +336,53 @@ section{
 }
 section:hover{
     box-shadow: 0 0 10px 4px  #dadada; 
+}
+
+.letreiro{
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    border-right: 4px solid #6b34e2;
+    white-space: nowrap;
+    animation:  escreverCompetencias 1s steps(20,end) forwards,
+                piscarBordaOrange  0.7s  infinite;
+}
+
+@keyframes escreverCompetencias{
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+@keyframes piscarBordaOrange {
+    from {border-color: transparent;}
+    to {border-color: #6b34e2;}
+}
+
+
+@media screen and (max-width:650px) {
+    .container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .nav-bar-items a{
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:651px) {
+    .nav-bar{
+        position: fixed; 
+        display: block; 
+        width: 100vw;
+    }
+    .nav-bar-items i{
+        display: none;
+    }
+    .nav-bar-items a{
+        display: inline-block;
+        padding-left: 10px; 
+    }
 }

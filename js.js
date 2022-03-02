@@ -1,21 +1,21 @@
-let sessoes = (function (){
-    var sessao  = document.getElementsByTagName('section');
-    var listaSessao = {}
-    var ultimoIdEmFoco
-    Array.prototype.forEach.call(sessao, function(event){
-        listaSessao[event.id] = event.offsetTop
-    })
-    return {
-        listaSessao,
-        RemoveUltimoId: function (){
-            if(ultimoIdEmFoco!=undefined) document.querySelector('a[href*=' + ultimoIdEmFoco + ']')
-            .querySelector('.line-efect').classList.remove('line-efect-on')
-        },
-        SetUltimoId: function (id){
-            ultimoIdEmFoco = id
-        }
-    }
-})()
+//let sessoes = (function (){
+//    var sessao  = document.getElementsByTagName('section');
+//    var listaSessao = {}
+//    var ultimoIdEmFoco
+//    Array.prototype.forEach.call(sessao, function(event){
+//        listaSessao[event.id] = event.offsetTop
+//    })
+//    return {
+//        listaSessao,
+//        RemoveUltimoId: function (){
+//            if(ultimoIdEmFoco!=undefined) document.querySelector('a[href*=' + ultimoIdEmFoco + ']')
+//            .querySelector('.line-efect').classList.remove('line-efect-on')
+//        },
+//        SetUltimoId: function (id){
+//            ultimoIdEmFoco = id
+//        }
+//    }
+//})()
 
 let contarImagens = (function(){
     let privateContador = 1;
@@ -41,31 +41,38 @@ let contarImagens = (function(){
 
 // Não esquecer de usar InnerHTML
 window.addEventListener("DOMContentLoaded", event => {
+    document.getElementById('open-nav-items').addEventListener('click',()=>{
+        document.querySelectorAll('.nav-bar-items > a').forEach(item => {
+            item.style.display = "block"
+        })
+    })
 
     CriarPaletaDeLiguagens();
 
-    document.addEventListener('scroll',function(){
-        var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-        scrollPosition+=80
-
-        for ( i in sessoes.listaSessao) {
-            if(sessoes.listaSessao[i] <= scrollPosition){ 
-                sessoes.RemoveUltimoId()
-                document.querySelector('a[href*=' + i + ']')
-                .querySelector('.line-efect').classList.add('line-efect-on')
-                sessoes.SetUltimoId(i)
-            }
-        }
-      })
+   // document.addEventListener('scroll',function(){
+   //     var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+   //     scrollPosition+=80
+//
+   //     for ( i in sessoes.listaSessao) {
+   //         if(sessoes.listaSessao[i] <= scrollPosition){ 
+   //             sessoes.RemoveUltimoId()
+   //             document.querySelector('a[href*=' + i + ']')
+   //             .querySelector('.line-efect').classList.add('line-efect-on')
+   //             sessoes.SetUltimoId(i)
+   //         }
+   //     }
+   //   })
 
     document.getElementById("tecno-103").addEventListener("click",() => {
         var amostraImagem = document.getElementById('box-imagens')
         amostraImagem.style.display= "block"
+        amostraImagem.style.height= 'auto'
     })
 
     document.getElementById("close-amostra-imagens").addEventListener("click",() => {
         var amostraImagem = document.getElementById('box-imagens')
         amostraImagem.style.display= "none"
+
     })
 
     document.querySelectorAll('i.bi-chevron-compact-left,i.bi-chevron-compact-right').forEach(item =>{
