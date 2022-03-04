@@ -37,6 +37,7 @@ h1{
     font-family: "Impact", -apple-system, BlinkMacSystemFont, "Segoe UI";
     color: #343a40;
     letter-spacing: 5px;
+    text-align: center;
 }
 h2{
     display: inline;
