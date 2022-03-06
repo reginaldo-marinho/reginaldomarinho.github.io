@@ -17,6 +17,7 @@
     width:35px;
     height:30px;
     padding:10px;
+    float: right;
   }
   
   .icon, .icon::after, .icon::before
@@ -55,6 +56,9 @@
      background:transparent;
   } 
   
+  .nav-bar-items .menu-btn:checked ~ a {
+    display: block;
+  }
 /* Botão open/close menu fim */
 
 
@@ -110,7 +114,8 @@ h2{
     justify-content : flex-end;
     background-color: #6b34e2;
     color: #fff;
-    z-index: 1000; 
+    z-index: 1000;  
+    box-shadow: 0 0 5px 0.5px  #dadada;
 }
 
 .nav-bar-items a {
