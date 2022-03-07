@@ -18,6 +18,7 @@
     width:35px;
     height:30px;
     padding:10px;
+    right: 0;
   }
   
   .icon, .icon::after, .icon::before
