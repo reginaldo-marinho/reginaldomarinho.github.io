@@ -463,6 +463,7 @@ section:hover{
 
     .img-perfil{
         width: 50%;
+        height: auto;
     }
 
     .nav-bar-items{
@@ -474,7 +475,7 @@ section:hover{
         display: block;
         text-align: center;
     }
-    
+
     .container {
         margin-left: 10px;
         margin-right: 10px;
