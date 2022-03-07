@@ -70,7 +70,6 @@
 --------------------------------
 */
 
-
 /* 
 --------------------------------
 --Card Curriculum Inicio-- 
@@ -87,6 +86,7 @@
   
   .card-curriculum-item i{
     margin-right:5px;
+    font-weight: bold;
   }
   
   .card-curriculum-item {
