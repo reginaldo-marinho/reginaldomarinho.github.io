@@ -460,10 +460,11 @@ section:hover{
 
 
 @media screen and (max-width:650px) {
-    .container {
-        margin-left: 10px;
-        margin-right: 10px;
+
+    .img-perfil{
+        width: 50%;
     }
+
     .nav-bar-items{
         height: 0;
         overflow: hidden;
@@ -472,6 +473,11 @@ section:hover{
     .nav-bar-items a {
         display: block;
         text-align: center;
+    }
+    
+    .container {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 
