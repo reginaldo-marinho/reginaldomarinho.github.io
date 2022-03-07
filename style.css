@@ -432,6 +432,10 @@ section:hover{
 }
 
 @media screen and (min-width:651px) {
+    
+    .banner-facha{
+        height: 50vh;
+    }
     .nav-bar{
         position: fixed; 
         display: block; 
