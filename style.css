@@ -64,7 +64,6 @@
   
   .nav-bar .menu-btn:checked ~ .nav-bar-items {
     display: block;
-    transition: height 0.6s ease-in-out;
     height: 30vh;
     border-bottom: 1px solid var(--cor-branco);
     
@@ -478,7 +477,7 @@ section:hover{
     .nav-bar-items{
         height: 0;
         overflow: hidden;
-        transition: 1s;
+        transition: height 0.6s ease-in-out;
     }
     .nav-bar-items a {
         display: block;
