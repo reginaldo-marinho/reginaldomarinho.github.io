@@ -460,8 +460,7 @@ section:hover{
 
 .icon-whatsapp{
     position: fixed;
-    
-    right: 5px;
+    right: 10px;
     bottom: 5px;
     color: #12ce3a;
     font-size: 50px;
