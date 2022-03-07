@@ -64,6 +64,8 @@
   
   .nav-bar .menu-btn:checked ~ .nav-bar-items {
     display: block;
+    transition: height 0.7s ease-in-out;
+    height: 50vh;
   }
 /* 
 --------------------------------
@@ -461,12 +463,12 @@ section:hover{
         margin-right: 10px;
     }
     .nav-bar-items{
-        display: none;
-        height: 0%;
+        height: 0;
+        overflow: hidden;
+        transition: 1s;
     }
     .nav-bar-items a {
         display: block;
-        height: 0%;
         text-align: center;
     }
 }
