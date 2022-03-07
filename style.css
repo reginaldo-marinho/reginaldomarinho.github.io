@@ -3,6 +3,7 @@
 
 
 :root {
+    --cor-branco: #fff;
     --cor-roxo-princial: #6b34e2;
   }
 
@@ -61,7 +62,7 @@
      background:transparent;
   } 
   
-  .nav-bar-items .menu-btn:checked ~ a {
+  .nav-bar .menu-btn:checked ~ .nav-bar-items {
     display: block;
   }
 /* 
@@ -143,20 +144,20 @@ h2{
     font-size: 2.5rem;
 }
 
-.nav-bar-items{
+.nav-bar{
     position: absolute;
     width: 100%;
-    height: auto;
     justify-content : flex-end;
     background-color: var(--cor-roxo-princial);
-    color: #fff;
+    color: var(--cor-branco);;
     z-index: 1000;  
-    transition: height 0.7s;
+    transition-property: height;
+    transition-duration: 4s;
 }
 
-.nav-bar-items a {
-    transition: 0.5s;
-    color: #fff;
+.nav-bar a {
+
+    color: var(--cor-branco);;
     padding-top: 20px;
     padding-bottom:20px;
     margin-right: 10px;
@@ -170,7 +171,7 @@ h2{
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border: 5px solid #fff;
+    border: 5px solid var(--cor-branco);;
     margin: 5px;
 }
 
@@ -221,7 +222,7 @@ footer{
     padding-top: 5rem;
     padding-bottom: 5rem;
     background-color: #6b34e2;
-    color: #fff;
+    color: var(--cor-branco);;
 }
 .footer-container{
     margin-left: 100px;
@@ -254,7 +255,7 @@ footer{
     display: block;
     padding-top: 10px ;
     padding-bottom: 10px;
-    background-color: #fff;
+    background-color: var(--cor-branco);;
     border-radius: 5px;
 }
 
@@ -300,7 +301,7 @@ footer{
 }
 .group-img img{
     transition: 0.7s;
-    background-color: #fff;
+    background-color: var(--cor-branco);;
 }
 .group-img:hover.group-img img {
     transform: rotateZ(360deg);
@@ -334,7 +335,7 @@ footer{
 .projeto-mais-imagens{
     position: absolute;
     opacity: 0%;
-    color: #fff;
+    color: var(--cor-branco);;
 }
 .projeto-mais-imagens i{
     font-size: 50px;
@@ -365,7 +366,7 @@ footer{
     height: 100vh;
     background: transparent;
     z-index: 2000;
-    background-color: #fff;
+    background-color: var(--cor-branco);;
 }
 
 .quadro-imagen{
@@ -459,10 +460,13 @@ section:hover{
         margin-left: 10px;
         margin-right: 10px;
     }
-
-    .nav-bar-items a{
+    .nav-bar-items{
         display: none;
-        width: 100%;
+        height: 0%;
+    }
+    .nav-bar-items a {
+        display: block;
+        height: 0%;
         text-align: center;
     }
 }
@@ -477,10 +481,10 @@ section:hover{
         display: block; 
         width: 100vw;
     }
-    .nav-bar-items .lbl-menu-btn{
+    .nav-bar .lbl-menu-btn{
         display: none;
     }
-    .nav-bar-items a{
+    .nav-bar a{
         display: inline-block;
         padding-left: 10px; 
     }
