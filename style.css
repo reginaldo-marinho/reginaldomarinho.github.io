@@ -518,3 +518,27 @@ section:hover{
         padding-left: 10px; 
     }
 }
+
+
+.card-skills {
+    max-width: 200px;
+}
+
+.card-skills img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+    
+} 
+
+.card-skills-icon {
+    font-size: 100px;
+    text-align: center;
+}
+
+.card-skills-description{
+    padding: 5px;
+    border: 2px solid var(--cor-roxo-princial);
+    border-radius: 5px;
+}
