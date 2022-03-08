@@ -476,17 +476,21 @@ section:hover{
 
     .nav-bar-items{
         position: absolute;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         padding-top: 30px;
         height: 100vh;
         right: 0;
         width: 0;
         overflow: hidden;
         transition: width 0.3s ease-in-out;
+        background-color: var(--cor-roxo-princial);
     }
     .nav-bar-items a {
         display: block;
         text-align: center;
+        overflow: hidden;
     }
 
     .container {
