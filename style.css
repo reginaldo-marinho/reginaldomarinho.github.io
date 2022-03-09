@@ -33,6 +33,10 @@
         overflow: hidden;
     }
 
+    .nav-bar-items a:hover  {
+        color: #dbff00;
+    }
+
     .container {
         margin-left: 10px;
         margin-right: 10px;
