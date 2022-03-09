@@ -7,80 +7,7 @@
     --cor-roxo-princial: #6b34e2;
   }
 
-  
-@media screen and (max-width:650px) {
-
-    .img-perfil{
-        width: 50%;
-        height: auto;
-    }
-
-    .nav-bar-items{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100vh;
-        right: 0;
-        width: 0;
-        overflow: hidden;
-        transition: width 0.3s ease-in-out;
-        background-color: var(--cor-roxo-princial);
-    }
-    .nav-bar-items a {
-        display: block;
-        text-align: center;
-        overflow: hidden;
-    }
-
-    .nav-bar-items a:hover  {
-        color: #dbff00;
-    }
-
-    .container {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .card-skills {
-        width: 80%;
-        margin-left: 0;
-        margin-top: 20px;
-    }
-    .card-skills img{
-        width: 70%;
-    } 
-
-}
-
-@media screen and (min-width:651px) {
-    
-    .banner-facha{
-        height: 50vh;
-    }
-    .nav-bar{
-        position: fixed; 
-        display: block; 
-        width: 100vw;
-    }
-    .nav-bar .lbl-menu-btn{
-        display: none;
-    }
-    .nav-bar a{
-        display: inline-block;
-        padding-left: 10px; 
-    }
-
-    .card-skills {
-        width: 200px;
-        margin-left: 20px;
-        margin-top: 20px;
-    }
-    .card-skills img{
-        max-width: 150px;
-    } 
-}
-
+ 
 /* 
 --------------------------------
 --Botão open/close menu inicio-- 
@@ -569,4 +496,78 @@ section{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+ 
+@media screen and (max-width:650px) {
+
+    .img-perfil{
+        width: 50%;
+        height: auto;
+    }
+
+    .nav-bar-items{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        right: 0;
+        width: 0;
+        overflow: hidden;
+        transition: width 0.3s ease-in-out;
+        background-color: var(--cor-roxo-princial);
+    }
+    .nav-bar-items a {
+        display: block;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .nav-bar-items a:hover{
+        color: #dbff00;
+    }
+
+    .container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .card-skills {
+        width: 80%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .card-skills img{
+        width: 70%;
+    } 
+
+}
+
+@media screen and (min-width:651px) {
+    
+    .banner-facha{
+        height: 50vh;
+    }
+    .nav-bar{
+        position: fixed; 
+        display: block; 
+        width: 100vw;
+    }
+    .nav-bar .lbl-menu-btn{
+        display: none;
+    }
+    .nav-bar a{
+        display: inline-block;
+        padding-left: 10px; 
+    }
+
+    .card-skills {
+        width: 200px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .card-skills img{
+        max-width: 150px;
+    } 
 }
